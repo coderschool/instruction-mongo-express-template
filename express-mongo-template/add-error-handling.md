@@ -1,4 +1,8 @@
-# Add error handling
+---
+description: Error handling
+---
+
+# 3. Add error handling
 
 ## Step 3.0
 
@@ -17,7 +21,7 @@ Add error handling
 
 Create a function to catch a request that do not match any previous routes. Create an error with 404 and message.
 
-- Go to `app.js` add
+* Go to `app.js` add
 
 ```javascript
 ---
@@ -31,7 +35,6 @@ app.use((req, res, next) => {
   const err = new AppError(404,"Not Found","Bad Request");
   next(err);
 });
-
 
 ```
 

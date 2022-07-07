@@ -2,11 +2,11 @@
 description: Set up express project
 ---
 
-# Express generator
+# 0. Generate Express App
 
 ## Step 0.0
 
-Clean up directory
+Clean up the current directory if existed
 
 ```shell
 ---
@@ -14,7 +14,7 @@ sh: rm -R server
 ---
 ```
 
-Set up express boiler plate
+Set up express boilerplate
 
 ```shell
 ---
@@ -29,7 +29,7 @@ change_process_dir: ./server
 ---
 ```
 
-- Install dev dependencies
+* Install dev dependencies
 
 ```shell
 ---
@@ -37,7 +37,7 @@ sh: npm i nodemon cors dotenv
 ---
 ```
 
-- Edit `package.json` scripts:
+* Edit `package.json` scripts to use nodemon:
 
 ```json
 ---
@@ -50,7 +50,7 @@ skip_if: dev
 "dev": "nodemon ./bin/www"
 ```
 
-- Add `.env` and `.gitignore`
+* Add `.env` and `.gitignore` . Then add `node_modules` to `.gitignore` and add `PORT=8000` to `.env`
 
 ```shell
 ---
@@ -60,26 +60,17 @@ sh:  echo 'node_modules/ \n .env' >.gitignore && echo 'PORT=8000' >.env
 
 ## Step 0.1
 
-<!-- ```shell
-
-sh: cd server
-change_process_dir: ./server
-
----
-
-````-->
-
 Clean up boilerplate
 
-- Remove `public/`
+* Remove `public/`
 
-```cmd
+```
 ---
 sh: rm -R public/
 ---
 ```
 
-- Remove `routes/users.js`
+* Remove `routes/users.js`
 
 ```shell
 ---
@@ -87,7 +78,7 @@ sh: rm routes/users.js
 ---
 ```
 
-- Go to `app.js` add
+* Go to `app.js` require cors library
 
 ```javascript
 ---
@@ -101,7 +92,7 @@ require(
 const cors= require("cors")
 ```
 
-- Go to `app.js` add
+* Go to `app.js` enable cross-origin access&#x20;
 
 ```javascript
 ---
@@ -112,7 +103,7 @@ after: public
 app.use(cors())
 ```
 
-- Go to `app.js` remove `require userRouter` line
+* Go to `app.js` remove `require userRouter` line. Since we don't need it
 
 ```javascript
 ---
@@ -124,7 +115,7 @@ remove_lines:
 ---
 ```
 
-- Go to `app.js` remove `app.use(/users)` line
+* Go to `app.js` remove `app.use(/users)` line
 
 ```javascript
 ---
@@ -136,7 +127,7 @@ remove_lines:
 ---
 ```
 
-- Go to `index.js` remove `res.render` line
+* Go to `index.js` remove `res.render` line
 
 ```javascript
 ---
@@ -148,7 +139,7 @@ remove_lines:
 ---
 ```
 
-- Then replace with
+* Then replace with
 
 ```javascript
 ---

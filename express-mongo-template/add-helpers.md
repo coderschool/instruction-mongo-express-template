@@ -1,8 +1,8 @@
 ---
-description: Set up express project
+description: Adding helper
 ---
 
-# Add helper functions
+# 2. Add helper functions
 
 ## Step 2.0
 
@@ -26,9 +26,7 @@ sh: touch helpers/utils.js
 
 ## Step 2.2
 
-Create a `sendResponse` helper.
-This function controls the way we response to the client. Both success and error.
-The reusability of this helper is very high so if we need to change the way to response later on, we only need to handle it here
+Create a `sendResponse` helper. This function controls the way we response to the client. Both success and error. The reusability of this helper is very high so if we need to change the way to response later on, we only need to handle it here
 
 ```javascript
 ---
@@ -45,7 +43,6 @@ utilsHelper.sendResponse = (res, status, success, data, errors, message) => {
   if (message) response.message = message;
   return res.status(status).json(response);
 };
-
 ```
 
 ## Step 2.3

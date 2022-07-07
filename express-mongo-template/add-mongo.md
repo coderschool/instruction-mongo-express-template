@@ -2,13 +2,13 @@
 description: add mongo to project
 ---
 
-# Add Mongo to project
+# 1. Add Mongo to project
 
 ## Step 1.0
 
 Add mongo uri to env
 
-```txt
+```
 ---
 to: .env
 inject: true
@@ -29,9 +29,9 @@ sh:  npm i mongoose
 
 ## Step 1.2
 
-Config mongoose to connect to local mongodb
+Config mongoose to connect to local MongoDB
 
-```js
+```javascript
 ---
 to: app.js
 inject: true
