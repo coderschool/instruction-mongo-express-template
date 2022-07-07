@@ -1,17 +1,3 @@
-# 5. Testing project
-
-## Step 5
-
-Test by running the server and making some request with Thunder Client
-
-```shell
----
-sh: npm run dev
----
-```
-
-Import is the thunder json to thunder for testing
-
 ```json
 {
   "client": "Thunder Client",
@@ -79,5 +65,3 @@ Import is the thunder json to thunder for testing
   ]
 }
 ```
-
-**The end**
