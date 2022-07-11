@@ -24,14 +24,14 @@ to: routes/index.js
 inject: true
 before: module.exports
 ---
-router.get("/foo/:test", async(req,res,next)=>{
+router.get("/template/:test", async(req,res,next)=>{
     const { test } = req.params
     try{
         //turn on to test error handling
         if(test==="error"){
         throw new AppError(401,"Access denied","Authentication Error")
         }else{
-        sendResponse(res,200,true,{data:"foo"},null,"template success")
+        sendResponse(res,200,true,{data:"template"},null,"template success")
         }
     }catch(err){
         next(err)

@@ -41,7 +41,6 @@ app.use((req, res, next) => {
 });
 
 
-
 /* Initialize Error Handling */
 app.use((err, req, res, next) => {
   console.log("ERROR", err);

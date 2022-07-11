@@ -1,22 +1,3 @@
-# 8. Testing project
-
-## Step 8
-
-Test by running the server and making some request with Thunder Client
-
-```shell
----
-sh: npm run dev
----
-```
-
-## Testing & Troubleshoot
-
-### Thunder collection
-
-Import is the thunder json to thunder and run the collection for testing
-
-```json
 {
   "client": "Thunder Client",
   "collectionName": "express-mongo-template",
@@ -156,20 +137,3 @@ Import is the thunder json to thunder and run the collection for testing
     }
   ]
 }
-```
-
-### Common error
-
-This error happen in the update and delete by id controller when we send value of id that not a mongo Object Id type in.
-
-![wrongId](../wrongId.png)
-
-Identify which one is the source of wrong id value. It will either be from a bad request url from thunder (client) or a mistake in data input in the `findByAdd...` query. Log to the console the requested id before the query happen to detect error.
-
-### Success test
-
-This is what a successful test look like
-
-![success](../success.png)
-
-**The end**
