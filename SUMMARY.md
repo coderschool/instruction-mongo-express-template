@@ -20,4 +20,4 @@
 
   - [9.3 Create and Read with relationship controllers](entity-relationship/boo-relationship-controller.md)
   - [9.4 Apply boo route](entity-relationship/route-controller-relationship.md)
-  - [9.5 Test project with thunder](entity-relationship/final-test.md)
+  - [10 Test project with thunder](entity-relationship/final-test.md)
