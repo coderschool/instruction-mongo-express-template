@@ -1,6 +1,6 @@
-# 8. Testing project
+# 10. Testing project
 
-## Step 8
+## Step 10
 
 Test by running the server and making some request with Thunder Client
 
@@ -20,7 +20,7 @@ Import is the thunder json to thunder and run the collection for testing
 {
   "client": "Thunder Client",
   "collectionName": "express-mongo-template",
-  "dateExported": "2022-07-11T13:58:43.155Z",
+  "dateExported": "2022-07-11T14:46:04.880Z",
   "version": "1.1",
   "folders": [
     {
@@ -28,6 +28,13 @@ Import is the thunder json to thunder and run the collection for testing
       "name": "foo",
       "containerId": "",
       "created": "2022-07-11T13:22:53.970Z",
+      "sortNum": 10000
+    },
+    {
+      "_id": "2df2f192-df58-4586-b261-1f55469a25d5",
+      "name": "boo",
+      "containerId": "",
+      "created": "2022-07-11T14:29:07.997Z",
       "sortNum": 10000
     }
   ],
@@ -103,6 +110,20 @@ Import is the thunder json to thunder and run the collection for testing
       "tests": []
     },
     {
+      "_id": "25425e5b-e08a-4145-9e87-a41c23d78a22",
+      "colId": "08488ecf-e54f-43d5-8378-b88420668f47",
+      "containerId": "2df2f192-df58-4586-b261-1f55469a25d5",
+      "name": "Get list of boos",
+      "url": "http://localhost:8000/boo",
+      "method": "GET",
+      "sortNum": 40000,
+      "created": "2022-07-11T14:29:07.997Z",
+      "modified": "2022-07-11T14:29:28.779Z",
+      "headers": [],
+      "params": [],
+      "tests": []
+    },
+    {
       "_id": "ac782e40-bb09-4f0c-b406-73dff255a8a8",
       "colId": "08488ecf-e54f-43d5-8378-b88420668f47",
       "containerId": "db207d21-c592-477e-a99e-6b870fcbf1d9",
@@ -117,6 +138,25 @@ Import is the thunder json to thunder and run the collection for testing
       "body": {
         "type": "json",
         "raw": "{\n    \"name\":\"info\",\n    \"flag\": true\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "_id": "6e9c234f-9369-493f-8e36-9fca220b3ac3",
+      "colId": "08488ecf-e54f-43d5-8378-b88420668f47",
+      "containerId": "2df2f192-df58-4586-b261-1f55469a25d5",
+      "name": "create a boo",
+      "url": "http://localhost:8000/boo",
+      "method": "POST",
+      "sortNum": 50000,
+      "created": "2022-07-11T14:29:07.998Z",
+      "modified": "2022-07-11T14:30:06.040Z",
+      "headers": [],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n    \"name\":\"info\"\n}",
         "form": []
       },
       "tests": []
@@ -158,18 +198,10 @@ Import is the thunder json to thunder and run the collection for testing
 }
 ```
 
-### Common error
-
-This error happen in the update and delete by id controller when we send value of id that not a mongo Object Id type in.
-
-![wrongId](../wrongId.png)
-
-Identify which one is the source of wrong id value. It will either be from a bad request url from thunder (client) or a mistake in data input in the `findByAdd...` query. Log to the console the requested id before the query happen to detect error.
-
 ### Success test
 
 This is what a successful test look like
 
-![success](../success.png)
+![success](../success-boo.png)
 
-**To be continue**
+**The end**

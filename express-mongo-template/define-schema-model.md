@@ -1,6 +1,6 @@
 # 5. Define schema and model
 
-## Step 5.0
+## STEP 5.0
 
 Create Foo.js module in models/
 
@@ -10,7 +10,7 @@ sh: mkdir models && touch models/Foo.js
 ---
 ```
 
-## Step 5.1
+## STEP 5.1
 
 Define schema
 
@@ -33,7 +33,7 @@ const fooSchema = mongoose.Schema(
 //Create and export model
 ```
 
-## Step 5.2
+## STEP 5.2
 
 Create and export model so that this could be use across the project
 
