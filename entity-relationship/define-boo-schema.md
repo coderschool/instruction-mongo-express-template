@@ -1,4 +1,4 @@
-# 9. Define schema and model with relationship
+# 9.1 - 9.2 Define boo schema & model
 
 ## Step 9.0
 
@@ -24,7 +24,7 @@ const booSchema = mongoose.Schema(
   {
     name: { type: String, required: true },
     description: { type:String, required:true},
-    referenceTo:{type: mongoose.SchemaTypes.ObjectId, required:true, ref: "Foo"} //one to one required
+    referenceTo:{type: mongoose.SchemaTypes.ObjectId, ref: "Foo"} //one to one optional
   },
   {
     timestamps: true,

@@ -1,4 +1,4 @@
-# 9.4. Create route for boos
+# 9.4 Apply boo route
 
 ## Step 9.4.0
 
@@ -24,7 +24,7 @@ const {createBoo, getAllBoos} = require("../controllers/boo.controllers.js")
 
 //Read
 //Create
-
+//Update
 ```
 
 ## Step 9.4.2
@@ -61,6 +61,13 @@ after: \/\/Create
  * @access public
  */
 router.post("/",createBoo)
+
+/**
+ * @route PUT api/boo
+ * @description update reference to a boo
+ * @access public
+ */
+router.put("/targetName",addReference)
 
 //export
 ```
