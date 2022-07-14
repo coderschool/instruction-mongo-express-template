@@ -1,6 +1,6 @@
 # 9. Define schema and model with relationship
 
-## STEP 9.0
+## Step 9.0
 
 Create Boo.js module in models/
 
@@ -10,7 +10,7 @@ sh: touch models/Boo.js
 ---
 ```
 
-## STEP 9.1
+## Step 9.1
 
 Define schema
 
@@ -33,7 +33,7 @@ const booSchema = mongoose.Schema(
 //Create and export model
 ```
 
-## STEP 9.2
+## Step 9.2
 
 Create and export model so that this could be use across the project
 

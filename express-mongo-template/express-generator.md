@@ -6,14 +6,6 @@ description: Set up express project
 
 ## Step 0.0
 
-Clean up the current directory if existed
-
-```shell
----
-sh: rm -R server
----
-```
-
 Set up express boilerplate
 
 ```shell
